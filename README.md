@@ -24,3 +24,13 @@ A **CRUD Web API project** built with **ASP.NET Core 8.0**, implementing **JWT A
 ---
 
 ## 📂 Project Structure
+
+JwtImplementationDemo/
+│── Controllers/ # API Controllers
+│── Models/ # Entity & DTO Models
+│── Services/ # Business Logic
+│── Repository/ # Data Access Layer
+│── Middleware/ # Exception Handling
+│── Filters/ # Action & Result Filters
+│── Program.cs # Application Startup
+│── appsettings.json # Configuration 
