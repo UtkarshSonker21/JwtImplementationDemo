@@ -1,0 +1,6 @@
+@JwtImplementationDemo_HostAddress = http://localhost:5220
+
+GET {{JwtImplementationDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
