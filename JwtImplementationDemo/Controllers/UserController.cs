@@ -1,5 +1,6 @@
-﻿using JwtImplementationDemo.Helper.Exceptions;
-using JwtImplementationDemo.Dto;
+﻿using JwtImplementationDemo.Dto;
+using JwtImplementationDemo.Helper.Exceptions;
+using JwtImplementationDemo.Helper.Filters;
 using JwtImplementationDemo.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -23,6 +24,7 @@ namespace JwtImplementationDemo.Controllers
 
         [HttpGet("GetAllUsers")]
         [Authorize]
+        [ServiceFilter(typeof(CachingFilter))]
         public async Task<ActionResult<ResponseModel>> GetAllUsers()
         {
             var response = await _userRepository.GetAllUsers();

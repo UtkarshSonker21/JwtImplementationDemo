@@ -77,6 +77,9 @@ builder.Services.AddAuthentication(options =>
 // Automapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
+builder.Services.AddMemoryCache();  // Enable in-memory caching
+builder.Services.AddScoped<CachingFilter>();  // Register the filter
+
 // Register in DI container, 1 instance per request.
 builder.Services.AddScoped<PerformanceMonitorFilter>();
 
